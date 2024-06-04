@@ -21,7 +21,12 @@ const handleOnSubmit = (e) => {
   };
 
   //check if there is enough hours left
-  
+  const existingHrs = taskTotal()
+
+  if(existingHrs + hr > hoursperweek){
+    return alert("sorry Boss not enough time to fit this task from last week ")
+  }
+
   taskList.push(obj);
 
   displayEntryList();
